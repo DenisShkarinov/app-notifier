@@ -1,0 +1,191 @@
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// ff
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+// Colors
+//Primary
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+
+// Neutral
+
+$veryLightGrayishBlue: hsl(210, 60%, 98%);
+$lightGrayishBlue: hsl(211, 68%, 94%);
+$GrayishBlue: hsl(219, 14%, 63%);
+$darkGrayishBlue: hsl(219, 12%, 42%);
+$veryDarkBlue: hsl(224, 21%, 14%);
+
+body {
+  background-color: $veryLightGrayishBlue;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+header {
+  position: fixed;
+  background-color: #fff;
+  padding: 1.5em 1.2em;
+  width: 100%;
+  left: 0; right: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue
+  }
+}
+
+button {
+  background-color: #fff;
+  padding: 0.25em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.border-0 {
+  border: 0;
+  &:hover {
+    color: $blue;
+  }
+}
+#notification-modal {
+  position: absolute;
+  top: 70px;
+  padding: 1.5em 1.32em;
+  max-width: 488px;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid $veryLightGrayishBlue;
+  overflow-y: auto;
+  z-index: -1;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5em;
+
+    h2 {
+      font-size: 16px;
+    }
+    button {
+      font-size: 11px;
+    }
+
+    .notification-counter {
+      color: #ffffff;
+      background-color: $blue;
+      margin-left: 5px;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+  }
+
+  .notification {
+    min-height: 53px;
+    padding: 7.5px 13px;
+    margin-bottom: 6px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: 1px solid $lightGrayishBlue;
+
+    &-body {
+      display: flex;
+
+      .notification-person {
+        margin-right: 10px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .notification-info {
+        //flex-grow: 2;
+        font-size: 11px;
+        h3 {
+          font-size: 11px;
+          font-weight: 400;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+        &__time {
+          color: $darkGrayishBlue;
+          font-size: 10px;
+          padding-top: 5px;
+        }
+
+        .notification-post__message {
+          padding: 1em .9em;
+          margin-top: .5em;
+          margin-bottom: .8em;
+          font-size: 11px;
+          border: 1px solid $lightGrayishBlue;
+          border-radius: 4px;
+          transition: .3s ease;
+
+          &:hover {
+            background-color: $lightGrayishBlue;
+            transition: .3s ease;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .new {
+    background-color: $veryLightGrayishBlue;
+
+    h3 {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $red;
+        position: absolute;
+        right: -10px; top: 0; bottom: 0;
+        margin: auto 0;
+      }
+    }
+  }
+}
