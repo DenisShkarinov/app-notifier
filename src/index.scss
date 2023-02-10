@@ -71,7 +71,7 @@ button {
 }
 #notification-modal {
   position: absolute;
-  top: 48px;
+  top: 72px;
   padding: 1.5em 1.32em;
   max-width: 488px;
   right: 0;
@@ -82,7 +82,7 @@ button {
   border-top: 1px solid $veryLightGrayishBlue;
   overflow-y: auto;
   z-index: -1;
-  box-shadow: 0px 2px 3px 0px $lightGrayishBlue;
+  box-shadow: 0 2px 3px 0 $lightGrayishBlue;
 
   .title {
     display: flex;
@@ -133,6 +133,10 @@ button {
           font-size: 11px;
           font-weight: 400;
 
+          a {
+            cursor: pointer;
+          }
+
           strong {
             font-weight: 700;
           }
@@ -162,10 +166,6 @@ button {
 
     &:last-child {
       margin-bottom: 0;
-    }
-
-    &:hover {
-      cursor: pointer;
     }
   }
   .new {
