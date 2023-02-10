@@ -5,7 +5,7 @@ import {notifications} from './data/data'
 
 function App() {
   const [data, setData] = useState(notifications)
-  const [showNotifications, setShowNotification] = useState(false)
+  const [showNotification, setShowNotification] = useState(false)
   const [amountOfRead, setAmountOfRead] = useState(data.filter(item => item.read === false).length);
   const [newClass, setNewClass] = useState(undefined)
   const markAllAsRead = () => {
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Context.Provider value={{
-      data, showNotifications, setShowNotification, markAllAsRead, amountOfRead
+      data, showNotification, setShowNotification, markAllAsRead, amountOfRead
     }}>
       <Header></Header>
     </Context.Provider>
